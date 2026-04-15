@@ -1,0 +1,28 @@
+diff --git a/node_modules/react-native-worklets-core/android/build.gradle b/node_modules/react-native-worklets-core/android/build.gradle
+index b6af1c3..d600105 100644
+--- a/node_modules/react-native-worklets-core/android/build.gradle
++++ b/node_modules/react-native-worklets-core/android/build.gradle
+@@ -28,18 +28,17 @@ static def findNodeModules(baseDir) {
+ }
+ 
+ def JS_RUNTIME = {
+-  // Override JS runtime with environment variable
+   if (System.getenv("JS_RUNTIME")) {
+     return System.getenv("JS_RUNTIME")
+   }
+-
+-  // Check if Hermes is enabled in app setup
++  // Correctly read hermesEnabled from gradle.properties
++  if (rootProject.hasProperty("hermesEnabled") && rootProject.property("hermesEnabled").toBoolean()) {
++    return "hermes"
++  }
+   def appProject = rootProject.allprojects.find { it.plugins.hasPlugin('com.android.application') }
+-  if (appProject?.hermesEnabled?.toBoolean()) {
++  if (appProject?.hasProperty("hermesEnabled") && appProject.property("hermesEnabled").toBoolean()) {
+     return "hermes"
+   }
+-
+-  // Use JavaScriptCore (JSC) by default
+   return "jsc"
+ }.call()
+ 

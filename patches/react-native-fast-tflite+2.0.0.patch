@@ -1,0 +1,752 @@
+diff --git a/node_modules/react-native-fast-tflite/android/build.gradle b/node_modules/react-native-fast-tflite/android/build.gradle
+index 5283afc..8de66c4 100644
+--- a/node_modules/react-native-fast-tflite/android/build.gradle
++++ b/node_modules/react-native-fast-tflite/android/build.gradle
+@@ -51,8 +51,8 @@ static def findNodeModules(baseDir) {
+ def nodeModules = findNodeModules(projectDir)
+ 
+ android {
+-  ndkVersion getExtOrDefault("ndkVersion")
+-  compileSdkVersion getExtOrIntegerDefault("compileSdkVersion")
++  ndkVersion android.ndkVersion
++  compileSdkVersion rootProject.ext.compileSdkVersion
+   namespace "com.tflite"
+ 
+   defaultConfig {
+diff --git a/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/results.bin b/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/results.bin
+new file mode 100644
+index 0000000..7ed749e
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/results.bin
+@@ -0,0 +1 @@
++o/bundleLibRuntimeToDirDebug
+diff --git a/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/tflite/BuildConfig.dex b/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/tflite/BuildConfig.dex
+new file mode 100644
+index 0000000..8ebf104
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/tflite/BuildConfig.dex differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/tflite/NativeRNTfliteSpec.dex b/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/tflite/NativeRNTfliteSpec.dex
+new file mode 100644
+index 0000000..853ac0c
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/tflite/NativeRNTfliteSpec.dex differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/tflite/TfliteModule.dex b/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/tflite/TfliteModule.dex
+new file mode 100644
+index 0000000..b596331
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/tflite/TfliteModule.dex differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/tflite/TflitePackage.dex b/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/tflite/TflitePackage.dex
+new file mode 100644
+index 0000000..354634d
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/tflite/TflitePackage.dex differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin b/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin
+new file mode 100644
+index 0000000..601f245
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/.transforms/5d519f3c1a857243fbe61197c69184a4/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/.transforms/f5c0494413f92fce82152cfb38bb5a5c/results.bin b/node_modules/react-native-fast-tflite/android/build/.transforms/f5c0494413f92fce82152cfb38bb5a5c/results.bin
+new file mode 100644
+index 0000000..0d259dd
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/.transforms/f5c0494413f92fce82152cfb38bb5a5c/results.bin
+@@ -0,0 +1 @@
++o/classes
+diff --git a/node_modules/react-native-fast-tflite/android/build/.transforms/f5c0494413f92fce82152cfb38bb5a5c/transformed/classes/classes_dex/classes.dex b/node_modules/react-native-fast-tflite/android/build/.transforms/f5c0494413f92fce82152cfb38bb5a5c/transformed/classes/classes_dex/classes.dex
+new file mode 100644
+index 0000000..d5a8e93
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/.transforms/f5c0494413f92fce82152cfb38bb5a5c/transformed/classes/classes_dex/classes.dex differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/buildConfig/debug/com/tflite/BuildConfig.java b/node_modules/react-native-fast-tflite/android/build/generated/source/buildConfig/debug/com/tflite/BuildConfig.java
+new file mode 100644
+index 0000000..f023664
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/buildConfig/debug/com/tflite/BuildConfig.java
+@@ -0,0 +1,12 @@
++/**
++ * Automatically generated file. DO NOT MODIFY
++ */
++package com.tflite;
++
++public final class BuildConfig {
++  public static final boolean DEBUG = Boolean.parseBoolean("true");
++  public static final String LIBRARY_PACKAGE_NAME = "com.tflite";
++  public static final String BUILD_TYPE = "debug";
++  // Field from default config.
++  public static final boolean IS_NEW_ARCHITECTURE_ENABLED = true;
++}
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/java/com/tflite/NativeRNTfliteSpec.java b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/java/com/tflite/NativeRNTfliteSpec.java
+new file mode 100644
+index 0000000..7c19460
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/java/com/tflite/NativeRNTfliteSpec.java
+@@ -0,0 +1,37 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateModuleJavaSpec.js
++ *
++ * @nolint
++ */
++
++package com.tflite;
++
++import com.facebook.proguard.annotations.DoNotStrip;
++import com.facebook.react.bridge.ReactApplicationContext;
++import com.facebook.react.bridge.ReactContextBaseJavaModule;
++import com.facebook.react.bridge.ReactMethod;
++import com.facebook.react.turbomodule.core.interfaces.TurboModule;
++import javax.annotation.Nonnull;
++
++public abstract class NativeRNTfliteSpec extends ReactContextBaseJavaModule implements TurboModule {
++  public static final String NAME = "Tflite";
++
++  public NativeRNTfliteSpec(ReactApplicationContext reactContext) {
++    super(reactContext);
++  }
++
++  @Override
++  public @Nonnull String getName() {
++    return NAME;
++  }
++
++  @ReactMethod(isBlockingSynchronousMethod = true)
++  @DoNotStrip
++  public abstract boolean install();
++}
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/CMakeLists.txt b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/CMakeLists.txt
+new file mode 100644
+index 0000000..2e7c207
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/CMakeLists.txt
+@@ -0,0 +1,28 @@
++# Copyright (c) Meta Platforms, Inc. and affiliates.
++#
++# This source code is licensed under the MIT license found in the
++# LICENSE file in the root directory of this source tree.
++
++cmake_minimum_required(VERSION 3.13)
++set(CMAKE_VERBOSE_MAKEFILE on)
++
++file(GLOB react_codegen_SRCS CONFIGURE_DEPENDS *.cpp react/renderer/components/RNTfliteSpec/*.cpp)
++
++add_library(
++  react_codegen_RNTfliteSpec
++  OBJECT
++  ${react_codegen_SRCS}
++)
++
++target_include_directories(react_codegen_RNTfliteSpec PUBLIC . react/renderer/components/RNTfliteSpec)
++
++target_link_libraries(
++  react_codegen_RNTfliteSpec
++  fbjni
++  jsi
++  # We need to link different libraries based on whether we are building rncore or not, that's necessary
++  # because we want to break a circular dependency between react_codegen_rncore and reactnative
++  reactnative
++)
++
++target_compile_reactnative_options(react_codegen_RNTfliteSpec PRIVATE)
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/RNTfliteSpec-generated.cpp b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/RNTfliteSpec-generated.cpp
+new file mode 100644
+index 0000000..339c613
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/RNTfliteSpec-generated.cpp
+@@ -0,0 +1,32 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateModuleJniCpp.js
++ */
++
++#include "RNTfliteSpec.h"
++
++namespace facebook::react {
++
++static facebook::jsi::Value __hostFunction_NativeRNTfliteSpecJSI_install(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
++  static jmethodID cachedMethodId = nullptr;
++  return static_cast<JavaTurboModule &>(turboModule).invokeJavaMethod(rt, BooleanKind, "install", "()Z", args, count, cachedMethodId);
++}
++
++NativeRNTfliteSpecJSI::NativeRNTfliteSpecJSI(const JavaTurboModule::InitParams &params)
++  : JavaTurboModule(params) {
++  methodMap_["install"] = MethodMetadata {0, __hostFunction_NativeRNTfliteSpecJSI_install};
++}
++
++std::shared_ptr<TurboModule> RNTfliteSpec_ModuleProvider(const std::string &moduleName, const JavaTurboModule::InitParams &params) {
++  if (moduleName == "Tflite") {
++    return std::make_shared<NativeRNTfliteSpecJSI>(params);
++  }
++  return nullptr;
++}
++
++} // namespace facebook::react
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/RNTfliteSpec.h b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/RNTfliteSpec.h
+new file mode 100644
+index 0000000..638df02
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/RNTfliteSpec.h
+@@ -0,0 +1,31 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateModuleJniH.js
++ */
++
++#pragma once
++
++#include <ReactCommon/JavaTurboModule.h>
++#include <ReactCommon/TurboModule.h>
++#include <jsi/jsi.h>
++
++namespace facebook::react {
++
++/**
++ * JNI C++ class for module 'NativeRNTflite'
++ */
++class JSI_EXPORT NativeRNTfliteSpecJSI : public JavaTurboModule {
++public:
++  NativeRNTfliteSpecJSI(const JavaTurboModule::InitParams &params);
++};
++
++
++JSI_EXPORT
++std::shared_ptr<TurboModule> RNTfliteSpec_ModuleProvider(const std::string &moduleName, const JavaTurboModule::InitParams &params);
++
++} // namespace facebook::react
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/ComponentDescriptors.cpp b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/ComponentDescriptors.cpp
+new file mode 100644
+index 0000000..6d25dd5
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/ComponentDescriptors.cpp
+@@ -0,0 +1,22 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateComponentDescriptorCpp.js
++ */
++
++#include <react/renderer/components/RNTfliteSpec/ComponentDescriptors.h>
++#include <react/renderer/core/ConcreteComponentDescriptor.h>
++#include <react/renderer/componentregistry/ComponentDescriptorProviderRegistry.h>
++
++namespace facebook::react {
++
++void RNTfliteSpec_registerComponentDescriptorsFromCodegen(
++  std::shared_ptr<const ComponentDescriptorProviderRegistry> registry) {
++
++}
++
++} // namespace facebook::react
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/ComponentDescriptors.h b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/ComponentDescriptors.h
+new file mode 100644
+index 0000000..501b1fe
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/ComponentDescriptors.h
+@@ -0,0 +1,24 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateComponentDescriptorH.js
++ */
++
++#pragma once
++
++#include <react/renderer/components/RNTfliteSpec/ShadowNodes.h>
++#include <react/renderer/core/ConcreteComponentDescriptor.h>
++#include <react/renderer/componentregistry/ComponentDescriptorProviderRegistry.h>
++
++namespace facebook::react {
++
++
++
++void RNTfliteSpec_registerComponentDescriptorsFromCodegen(
++  std::shared_ptr<const ComponentDescriptorProviderRegistry> registry);
++
++} // namespace facebook::react
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/EventEmitters.cpp b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/EventEmitters.cpp
+new file mode 100644
+index 0000000..d369559
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/EventEmitters.cpp
+@@ -0,0 +1,16 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateEventEmitterCpp.js
++ */
++
++#include <react/renderer/components/RNTfliteSpec/EventEmitters.h>
++
++
++namespace facebook::react {
++
++} // namespace facebook::react
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/EventEmitters.h b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/EventEmitters.h
+new file mode 100644
+index 0000000..2845a63
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/EventEmitters.h
+@@ -0,0 +1,17 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateEventEmitterH.js
++ */
++#pragma once
++
++#include <react/renderer/components/view/ViewEventEmitter.h>
++
++
++namespace facebook::react {
++
++} // namespace facebook::react
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/Props.cpp b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/Props.cpp
+new file mode 100644
+index 0000000..582aa0c
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/Props.cpp
+@@ -0,0 +1,19 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GeneratePropsCpp.js
++ */
++
++#include <react/renderer/components/RNTfliteSpec/Props.h>
++#include <react/renderer/core/PropsParserContext.h>
++#include <react/renderer/core/propsConversions.h>
++
++namespace facebook::react {
++
++
++
++} // namespace facebook::react
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/Props.h b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/Props.h
+new file mode 100644
+index 0000000..870864b
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/Props.h
+@@ -0,0 +1,18 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GeneratePropsH.js
++ */
++#pragma once
++
++
++
++namespace facebook::react {
++
++
++
++} // namespace facebook::react
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/RNTfliteSpecJSI.h b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/RNTfliteSpecJSI.h
+new file mode 100644
+index 0000000..81ba9f5
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/RNTfliteSpecJSI.h
+@@ -0,0 +1,37 @@
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateModuleH.js
++ */
++
++#pragma once
++
++#include <ReactCommon/TurboModule.h>
++#include <react/bridging/Bridging.h>
++
++namespace facebook::react {
++
++
++template <typename T>
++class JSI_EXPORT NativeRNTfliteCxxSpec : public TurboModule {
++public:
++  static constexpr std::string_view kModuleName = "Tflite";
++
++protected:
++  NativeRNTfliteCxxSpec(std::shared_ptr<CallInvoker> jsInvoker) : TurboModule(std::string{NativeRNTfliteCxxSpec::kModuleName}, jsInvoker) {
++    methodMap_["install"] = MethodMetadata {.argCount = 0, .invoker = __install};
++  }
++  
++private:
++  static jsi::Value __install(jsi::Runtime &rt, TurboModule &turboModule, const jsi::Value* /*args*/, size_t /*count*/) {
++    static_assert(
++      bridging::getParameterCount(&T::install) == 1,
++      "Expected install(...) to have 1 parameters");
++    return bridging::callFromJs<bool>(rt, &T::install,  static_cast<NativeRNTfliteCxxSpec*>(&turboModule)->jsInvoker_, static_cast<T*>(&turboModule));
++  }
++};
++
++} // namespace facebook::react
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/ShadowNodes.cpp b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/ShadowNodes.cpp
+new file mode 100644
+index 0000000..c94b3a2
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/ShadowNodes.cpp
+@@ -0,0 +1,17 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateShadowNodeCpp.js
++ */
++
++#include <react/renderer/components/RNTfliteSpec/ShadowNodes.h>
++
++namespace facebook::react {
++
++
++
++} // namespace facebook::react
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/ShadowNodes.h b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/ShadowNodes.h
+new file mode 100644
+index 0000000..59068d2
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/ShadowNodes.h
+@@ -0,0 +1,23 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateShadowNodeH.js
++ */
++
++#pragma once
++
++#include <react/renderer/components/RNTfliteSpec/EventEmitters.h>
++#include <react/renderer/components/RNTfliteSpec/Props.h>
++#include <react/renderer/components/RNTfliteSpec/States.h>
++#include <react/renderer/components/view/ConcreteViewShadowNode.h>
++#include <jsi/jsi.h>
++
++namespace facebook::react {
++
++
++
++} // namespace facebook::react
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/States.cpp b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/States.cpp
+new file mode 100644
+index 0000000..e5a31d8
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/States.cpp
+@@ -0,0 +1,16 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateStateCpp.js
++ */
++#include <react/renderer/components/RNTfliteSpec/States.h>
++
++namespace facebook::react {
++
++
++
++} // namespace facebook::react
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/States.h b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/States.h
+new file mode 100644
+index 0000000..2e55bce
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/jni/react/renderer/components/RNTfliteSpec/States.h
+@@ -0,0 +1,20 @@
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateStateH.js
++ */
++#pragma once
++
++#include <react/renderer/core/StateData.h>
++#ifdef RN_SERIALIZABLE_STATE
++#include <folly/dynamic.h>
++#endif
++
++namespace facebook::react {
++
++
++
++} // namespace facebook::react
+\ No newline at end of file
+diff --git a/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/schema.json b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/schema.json
+new file mode 100644
+index 0000000..bf8351b
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/generated/source/codegen/schema.json
+@@ -0,0 +1 @@
++{"libraryName":"","modules":{"NativeRNTflite":{"type":"NativeModule","aliasMap":{},"enumMap":{},"spec":{"eventEmitters":[],"methods":[{"name":"install","optional":false,"typeAnnotation":{"type":"FunctionTypeAnnotation","returnTypeAnnotation":{"type":"BooleanTypeAnnotation"},"params":[]}}]},"moduleName":"Tflite"}}}
+\ No newline at end of file
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml b/node_modules/react-native-fast-tflite/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml
+new file mode 100644
+index 0000000..ffa59a5
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.tflite" >
++
++    <uses-sdk android:minSdkVersion="24" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json b/node_modules/react-native-fast-tflite/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json
+new file mode 100644
+index 0000000..349b93c
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json
+@@ -0,0 +1,18 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "AAPT_FRIENDLY_MERGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "com.tflite",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "outputFile": "AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties b/node_modules/react-native-fast-tflite/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties
+new file mode 100644
+index 0000000..1211b1e
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties
+@@ -0,0 +1,6 @@
++aarFormatVersion=1.0
++aarMetadataVersion=1.0
++minCompileSdk=1
++minCompileSdkExtension=0
++minAndroidGradlePluginVersion=1.0.0
++coreLibraryDesugaringEnabled=false
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json b/node_modules/react-native-fast-tflite/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json
+new file mode 100644
+index 0000000..9e26dfe
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json
+@@ -0,0 +1 @@
++{}
+\ No newline at end of file
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar b/node_modules/react-native-fast-tflite/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar
+new file mode 100644
+index 0000000..69c363b
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar b/node_modules/react-native-fast-tflite/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar
+new file mode 100644
+index 0000000..239a465
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/compile_symbol_list/debug/generateDebugRFile/R.txt b/node_modules/react-native-fast-tflite/android/build/intermediates/compile_symbol_list/debug/generateDebugRFile/R.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties b/node_modules/react-native-fast-tflite/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+new file mode 100644
+index 0000000..f38b360
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+@@ -0,0 +1 @@
++#Tue Jan 27 19:44:38 IST 2026
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml b/node_modules/react-native-fast-tflite/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+new file mode 100644
+index 0000000..9944234
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\build\generated\res\resValues\debug"/></dataSet><mergedItems/></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/incremental/mergeDebugAssets/merger.xml b/node_modules/react-native-fast-tflite/android/build/intermediates/incremental/mergeDebugAssets/merger.xml
+new file mode 100644
+index 0000000..9ca692a
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/incremental/mergeDebugAssets/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\assets"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\debug\assets"/></dataSet><dataSet config="generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\build\intermediates\shader_assets\debug\compileDebugShaders\out"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/incremental/mergeDebugShaders/merger.xml b/node_modules/react-native-fast-tflite/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+new file mode 100644
+index 0000000..050df1f
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\shaders"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\debug\shaders"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/tflite/BuildConfig.class b/node_modules/react-native-fast-tflite/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/tflite/BuildConfig.class
+new file mode 100644
+index 0000000..18fc96f
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/tflite/BuildConfig.class differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/tflite/NativeRNTfliteSpec.class b/node_modules/react-native-fast-tflite/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/tflite/NativeRNTfliteSpec.class
+new file mode 100644
+index 0000000..8f18cae
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/tflite/NativeRNTfliteSpec.class differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/tflite/TfliteModule.class b/node_modules/react-native-fast-tflite/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/tflite/TfliteModule.class
+new file mode 100644
+index 0000000..5b02a55
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/tflite/TfliteModule.class differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/tflite/TflitePackage.class b/node_modules/react-native-fast-tflite/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/tflite/TflitePackage.class
+new file mode 100644
+index 0000000..357d1f4
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/tflite/TflitePackage.class differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt b/node_modules/react-native-fast-tflite/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt
+new file mode 100644
+index 0000000..78ac5b8
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt
+@@ -0,0 +1,2 @@
++R_DEF: Internal format may change without notice
++local
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt b/node_modules/react-native-fast-tflite/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt
+new file mode 100644
+index 0000000..6bbb0ac
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt
+@@ -0,0 +1,7 @@
++1<?xml version="1.0" encoding="utf-8"?>
++2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++3    package="com.tflite" >
++4
++5    <uses-sdk android:minSdkVersion="24" />
++6
++7</manifest>
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml b/node_modules/react-native-fast-tflite/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml
+new file mode 100644
+index 0000000..ffa59a5
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.tflite" >
++
++    <uses-sdk android:minSdkVersion="24" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json b/node_modules/react-native-fast-tflite/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json
+new file mode 100644
+index 0000000..0637a08
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json
+@@ -0,0 +1 @@
++[]
+\ No newline at end of file
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt b/node_modules/react-native-fast-tflite/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt
+new file mode 100644
+index 0000000..08f4ebe
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt
+@@ -0,0 +1 @@
++0 Warning/Error
+\ No newline at end of file
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/tflite/BuildConfig.class b/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/tflite/BuildConfig.class
+new file mode 100644
+index 0000000..18fc96f
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/tflite/BuildConfig.class differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/tflite/NativeRNTfliteSpec.class b/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/tflite/NativeRNTfliteSpec.class
+new file mode 100644
+index 0000000..8f18cae
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/tflite/NativeRNTfliteSpec.class differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/tflite/TfliteModule.class b/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/tflite/TfliteModule.class
+new file mode 100644
+index 0000000..5b02a55
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/tflite/TfliteModule.class differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/tflite/TflitePackage.class b/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/tflite/TflitePackage.class
+new file mode 100644
+index 0000000..357d1f4
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/tflite/TflitePackage.class differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_jar/debug/bundleLibRuntimeToJarDebug/classes.jar b/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_jar/debug/bundleLibRuntimeToJarDebug/classes.jar
+new file mode 100644
+index 0000000..f1028cf
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/intermediates/runtime_library_classes_jar/debug/bundleLibRuntimeToJarDebug/classes.jar differ
+diff --git a/node_modules/react-native-fast-tflite/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt b/node_modules/react-native-fast-tflite/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt
+new file mode 100644
+index 0000000..499c26c
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt
+@@ -0,0 +1 @@
++com.tflite
+diff --git a/node_modules/react-native-fast-tflite/android/build/outputs/logs/manifest-merger-debug-report.txt b/node_modules/react-native-fast-tflite/android/build/outputs/logs/manifest-merger-debug-report.txt
+new file mode 100644
+index 0000000..20f4eb5
+--- /dev/null
++++ b/node_modules/react-native-fast-tflite/android/build/outputs/logs/manifest-merger-debug-report.txt
+@@ -0,0 +1,17 @@
++-- Merging decision tree log ---
++manifest
++ADDED from C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\AndroidManifest.xml:1:1-4:12
++INJECTED from C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\AndroidManifest.xml:1:1-4:12
++	package
++		ADDED from C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\AndroidManifest.xml:2:11-31
++		INJECTED from C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\AndroidManifest.xml
++	xmlns:android
++		ADDED from C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\AndroidManifest.xml:1:11-69
++uses-sdk
++INJECTED from C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
++INJECTED from C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\AndroidManifest.xml
++INJECTED from C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\AndroidManifest.xml
++	android:targetSdkVersion
++		INJECTED from C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\AndroidManifest.xml
++	android:minSdkVersion
++		INJECTED from C:\Users\Lenovo\WebstormProjects\Lumenive_App\node_modules\react-native-fast-tflite\android\src\main\AndroidManifest.xml
+diff --git a/node_modules/react-native-fast-tflite/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin b/node_modules/react-native-fast-tflite/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin
+new file mode 100644
+index 0000000..b9fa5d6
+Binary files /dev/null and b/node_modules/react-native-fast-tflite/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin differ

@@ -1,0 +1,1 @@
+export const API_URL ="https://lumenive-1.onrender.com/plot";

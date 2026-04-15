@@ -1,0 +1,3 @@
+﻿com.google.android.safetycore
+com.google.android.contactkeys
+com.react_nat_reach_pred
